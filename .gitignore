@@ -1,0 +1,73 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# next.js
+.next/
+out/
+build
+dist
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+**/.env
+**/.env.*
+!.env.example
+!.env.local.example
+
+# turbo
+.turbo
+
+# PWA
+**/public/workbox-*
+**/public/sw.*
+**/public/fallback-*
+
+# Local models and private backend library data
+/models/
+/apps/rag-api/data/
+
+# Python environments and generated files at any workspace depth
+**/.venv/
+**/venv/
+**/env/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/*.egg-info/
+
+# SQLite databases and transient journal/WAL/shared-memory files
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-journal
+*.sqlite3-journal
+*.db-journal
+*.sqlite-wal
+*.sqlite3-wal
+*.db-wal
+*.sqlite-shm
+*.sqlite3-shm
+*.db-shm
+
+# Generated pytest diagnostics and temporary backend test data
+pytestdebug.log
+/apps/rag-api/tests/tmp*/
+
+# TypeScript build cache
+**/*.tsbuildinfo

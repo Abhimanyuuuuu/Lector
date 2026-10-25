@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lector-rag-api"
+version = "0.1.0"
+description = "Local-first RAG API foundation for Lector"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "pydantic>=2.7,<3.0",
+  "uvicorn>=0.30,<1.0",
+]
+
+[project.optional-dependencies]
+test = ["httpx>=0.27,<1.0"]
+booknlp = ["booknlp==1.0.8"]
+
+[tool.setuptools.packages.find]
+include = ["lector_rag_api*"]

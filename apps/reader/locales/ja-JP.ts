@@ -1,0 +1,123 @@
+export default {
+  'home.title': 'ホーム',
+  'home.share': '共有',
+  'home.download': 'ダウンロード',
+  'home.download_sample_book': 'サンプルブックをダウンロード',
+  'home.select': '選択',
+  'home.cancel': 'キャンセル',
+  'home.select_all': 'すべて選択',
+  'home.deselect_all': 'すべて選択解除',
+  'home.export': 'エクスポート',
+  'home.import': 'インポート',
+  'home.upload': 'アップロード',
+  'home.delete': '削除',
+
+  'toc.title': '目次',
+  'toc.contents': 'コンテンツ',
+  'toc.library': 'ライブラリ',
+
+  'search.title': '検索',
+  'search.files.result': '{m}件中 {n}件該当',
+
+  'annotation.title': '注釈',
+  'annotation.definitions': '定義',
+  'annotation.annotations': '注釈',
+  'annotation.copy_as_markdown': 'Markdownとしてコピー',
+
+  'image.title': '画像',
+
+  'timeline.title': 'タイムライン',
+
+  'typography.title': 'タイポグラフィ',
+  'typography.scope.book': '本',
+  'typography.scope.global': 'グローバル',
+  'typography.page_view': 'ページ表示',
+  'typography.page_view.single_page': '片ページ',
+  'typography.page_view.double_page': '見開きページ',
+  'typography.font_family': 'フォントファミリー',
+  'typography.font_size': 'フォントサイズ',
+  'typography.font_weight': 'フォントウェイト',
+  'typography.line_height': '行の高さ',
+  'typography.zoom': 'ズーム',
+
+  'theme.title': 'テーマ',
+  'lector.title': 'Lector',
+  'lector-info.title': 'Lector ガイド',
+  'lector.open_book': 'Lector を使うには本を開いてください。',
+  'lector.reading_boundary': '確認済みの読書位置',
+  'lector.index_first': '読書位置を確認する前に本を登録してください。',
+  'lector.boundary_unavailable':
+    '現在位置を完了済みの本文段落に対応付けられませんでした。位置が確実な本文で再試行してください。',
+  'lector.navigation_unavailable':
+    'この引用には使用可能な CFI または既知のセクション位置がありません。',
+  'lector.index': 'この本をインデックス',
+  'lector.indexing': 'セクション {current}/{total} を処理中…',
+  'lector.uploading': 'ローカル Lector バックエンドにテキストを送信中…',
+  'lector.indexed':
+    '{units} 個のテキスト単位を {chunks} 個のチャンクに登録しました。',
+  'lector.partial':
+    '本を完全に登録できませんでした。部分的な結果は登録されていません。',
+  'lector.confirmed': '確認済み境界: {section}、段落 {paragraph}。',
+  'lector.no_boundary':
+    '質問やストーリー情報の抽出の前に読了位置を確認してください。',
+  'lector.confirm_description':
+    '確認すると、この位置までの前のセクションを含むすべての内容を読んだと宣言します。読み飛ばした場合は前の位置を選んでください。',
+  'lector.confirm_read': 'この位置までの内容をすべて読みました。',
+  'lector.confirm_progress': '現在位置より前の最後の完了段落まで確認',
+  'lector.ask': 'この本について質問',
+  'lector.question': '質問',
+  'lector.send': '質問する',
+  'lector.mode': '検索モード',
+  'lector.loading': '境界内の本文を検索中…',
+  'lector.retry': '再試行',
+  'lector.navigate_exact': '引用箇所を開く',
+  'lector.navigate_section': 'セクションを開く（段落位置は特定できません）',
+  'lector.citations': '引用',
+  'lector.graph_facts': '関連グラフ事実 ID',
+  'lector.uncertainty': '不確実性',
+  'lector.insufficient': '利用可能な根拠だけでは回答できません。',
+  'lector.backend_required': 'ローカル Python RAG API を起動してください。',
+  'lector.index_not_ready':
+    'すべての EPUB セクションが読み込まれるまでお待ちください。',
+  'lector.extract_failed': '抽出に失敗したため、本は登録されませんでした。',
+  'lector.boundary_invalidated':
+    'EPUB の内容が変更されました。読了位置を再確認してください。',
+  'lector.graph_ready':
+    'ストーリーグラフを更新しました（人物 {entities}、出来事 {events}、関係 {relationships}）。',
+  'lector.graph_unavailable':
+    'ストーリー抽出は利用できません。キーワード検索は利用できます。',
+  'theme.source_color': 'ソースカラー',
+  'theme.background_color': '背景色',
+
+  'settings.title': '設定',
+  'settings.language': '言語',
+  'settings.color_scheme': '配色',
+  'settings.color_scheme.system': 'システム',
+  'settings.color_scheme.light': 'ライト',
+  'settings.color_scheme.dark': 'ダーク',
+  'settings.synchronization.title': '同期',
+  'settings.synchronization.authorize': '認証',
+  'settings.synchronization.unauthorize': '認証解除',
+  'settings.cache': 'キャッシュ',
+  'settings.cache.clear': 'クリア',
+  'settings.text_selection_menu': 'テキスト選択メニュー',
+  'settings.text_selection_menu.enable': '有効化',
+
+  'menu.copy': 'コピー',
+  'menu.search_in_book': '本を検索',
+  'menu.annotate': '注釈',
+  'menu.define': '定義',
+  'menu.undefine': '未定義',
+  'menu.create': '作成',
+  'menu.delete': '削除',
+  'menu.update': '更新',
+
+  'action.expand_all': 'すべて展開',
+  'action.collapse_all': 'すべて折りたたむ',
+  'action.close': '閉じる',
+  'action.clear': 'クリア',
+  'action.step_down': 'ステップダウン',
+  'action.step_up': 'ステップアップ',
+
+  untitled: '無題',
+} as const

@@ -1,0 +1,44 @@
+# Git metadata and local-only credentials/configuration
+.git
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.local.example
+
+# Local models, caches, private book data, and Python environments
+/models/
+/apps/rag-api/data/
+**/.venv/
+**/venv/
+**/env/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/*.egg-info/
+**/tests/tmp*/
+**/pytestdebug.log
+**/*.log
+**/*.sqlite
+**/*.sqlite3
+**/*.db
+**/*.sqlite-journal
+**/*.sqlite3-journal
+**/*.db-journal
+**/*.sqlite-wal
+**/*.sqlite3-wal
+**/*.db-wal
+**/*.sqlite-shm
+**/*.sqlite3-shm
+**/*.db-shm
+
+# Build output and installed JavaScript dependencies
+**/node_modules/
+**/dist/
+**/build/
+**/out/
+**/.next/
+**/.turbo/
+**/coverage/
+**/public/workbox-*
+**/public/sw.*
+**/public/fallback-*
