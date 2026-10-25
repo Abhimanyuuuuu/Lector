@@ -1,88 +1,91 @@
-<h1 align="center"><a href="https://flowoss.com">Flow - Open Source Software (OSS)</a></h1>
+# Lector
 
-<h2 align="center">Redefine ePub reader</h2>
+**A browser-based EPUB reader with AI-powered story understanding.**
 
-<p align="center">Free. Open source. Browser-based.</p>
-
-<p align="center"><img src="apps/website/public/screenshots/01.webp"/>
-
-</p>
+Lector combines a reading experience with Retrieval-Augmented Generation (RAG), allowing readers to ask questions about a book and retrieve relevant passages from its content. It also builds a character and story graph to provide additional narrative context.
 
 ## Features
 
-- Grid layout
-- Search in book
-- Image preview
-- Custom typography
-- Highlight and Annotation
-- Theme
-- Share/Download book with link
-- Data export
-- Cloud storage
+- **EPUB reader:** Read books in a browser-based interface.
+- **AI-powered book Q&A:** Ask questions about the current book using relevant retrieved passages.
+- **Hybrid retrieval:** Combine semantic and keyword search to find relevant text.
+- **Character graph:** Explore characters and their relationships using extracted story information.
+- **Story context:** Use graph information alongside retrieved passages to help answer questions about the narrative.
+- **Reading progress:** Resume reading from your saved position.
+- **Reading customization:** Customize typography, themes, and other reading preferences.
+- **Library and annotations:** Manage books and use supported reading and annotation features.
 
-For planed features, see our [roadmap](https://pacexy.notion.site/283696d0071c43bfb03652e8e5f47936?v=b43f4dd7a3cb4ce785d6c32b698a8ff5).
+## Technology
 
-## Development
+- **Frontend:** React, Next.js, TypeScript
+- **EPUB rendering:** epub.js
+- **Backend:** Python and FastAPI
+- **Retrieval:** Keyword search, semantic search, and hybrid retrieval
+- **Embeddings:** Ollama with `nomic-embed-text`
+- **Answer generation:** Groq
+- **Graph extraction:** BookNLP
+- **Persistence:** SQLite
+
+## Getting started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org)
-- [pnpm](https://pnpm.io/installation)
-- [Git](https://git-scm.com/downloads)
+- Git
+- Node.js
+- pnpm
+- Python 3.11 or later
+- Ollama
+- A Groq API key for AI-generated answers
 
-### Clone the repo
+### Setup
+
+Clone your repository:
 
 ```bash
-git clone https://github.com/pacexy/flow
+git clone https://github.com/Abhimanyuuuuu/Lector.git
+cd Lector
 ```
 
-### Install the dependencies
+Install the JavaScript dependencies:
 
 ```bash
-pnpm i
+pnpm install
 ```
 
-### Setup the environment variables
+Run the project setup script in PowerShell:
 
-Copy and rename all `.env.local.example`s to `.env.local` and setup the environment variables.
+```powershell
+.\Setup-Lector.ps1
+```
 
-### Run the apps
+Follow the prompts to configure the environment and required services.
+
+### Run Lector
+
+Use the Windows launcher:
+
+```powershell
+.\Start-Lector.ps1
+```
+
+Alternatively, start the development apps using the repository's configured pnpm scripts:
 
 ```bash
 pnpm dev
 ```
 
-## Self-hosting
+The RAG backend requires its own Python environment and configuration. See [`apps/rag-api/README.md`](apps/rag-api/README.md) and [`docs/lector-python-backend.md`](docs/lector-python-backend.md) for details.
 
-Before self-hosting, you should [setup the environment variables](#setup-the-environment-variables).
+## Project structure
 
-### Docker
+- `apps/reader` — EPUB reader and frontend RAG integration
+- `apps/rag-api` — Python API, retrieval, book processing, and story graph
+- `apps/website` — Project website
+- `packages/epubjs` — EPUB rendering library
+- `docs` — Project and backend documentation
 
-You can use docker-compose:
+## License
 
-```sh
-docker compose up -d
-```
+Lector is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). See [`LICENSE`](LICENSE).
 
-Or build the image and run it manually:
-
-```sh
-docker build -t flow .
-docker run -p 3000:3000 --env-file apps/reader/.env.local flow
-```
-
-## Contributing
-
-There are many ways in which you can participate in this project, for example:
-
-- [Submit bugs and feature requests](https://github.com/pacexy/flow/issues/new), and help us verify as they are checked in
-- [Submit pull requests](https://github.com/pacexy/flow/pulls)
-
-## Credits
-
-- [Epub.js](https://github.com/futurepress/epub.js/)
-- [React](https://github.com/facebook/react)
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org)
-- [Vercel](https://vercel.com)
-- [Turborepo](https://turbo.build/repo)
+This project builds on [Flow](https://github.com/pacexy/flow) and uses [epub.js](https://github.com/futurepress/epub.js/) and other open-source software. Please refer to the relevant third-party licenses and notices.
